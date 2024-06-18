@@ -1,24 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import { ThemeProvider } from './modules/core/theme/theme.context';
+import NavigationBar from './modules/core/components/navigation-bar/navigation-bar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      <div className="App">
+        <NavigationBar></NavigationBar>
+        <p>Test</p>
+      </div>
+    </ThemeProvider>
   );
 }
 
